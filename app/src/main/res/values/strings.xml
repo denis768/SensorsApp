@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SensorsApp</string>
+    <string name="title_activity_login">Вход</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="action_sign_in">Войти</string>
+    <string name="action_login">Зарегистрироваться</string>
+    <string name="welcome">"Здравствуйте !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="pm25_value">%1$d</string>
+    <string name="pm10_value">%1$d</string>
+    <string name="temperature_value">%1$d</string>
+    <string name="humidity_value">%1$d</string>
+</resources>
