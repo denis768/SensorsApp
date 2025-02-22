@@ -1,11 +1,9 @@
 package com.school.sensorsapp.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.school.sensorsapp.Profile
 import com.school.sensorsapp.R
 import com.school.sensorsapp.data.api.sensors.SensorsAPIService
 import com.school.sensorsapp.databinding.ActivityMainBinding
@@ -108,8 +106,8 @@ class MainActivity : AppCompatActivity(), CameraListener {
         latitude = Math.round(sensor.latitude)
         longitude = Math.round(sensor.longitude)
         altitude = Math.round(sensor.altitude)
-        binding!!.humidity.text=getString(R.string.humidity_value, humidity)+"%"
-        binding!!.temperature.text = getString(R.string.temperature_value, temperature)+"°C"
+        binding!!.humidity.text = getString(R.string.humidity_value, humidity) + "%"
+        binding!!.temperature.text = getString(R.string.temperature_value, temperature) + "°C"
         binding!!.value1.text = getString(R.string.pm25_value, pm25)
         binding!!.value2.text = getString(R.string.pm10_value, pm10)
     }
