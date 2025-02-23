@@ -15,4 +15,7 @@
 
     <color name="colorPrimary">#FEFEFE</color>
     <color name="green">#49B307</color>
+    <color name="orange">#FF8000</color>
+    <color name="red">#FF0000</color>
+    <color name="purple">#800080</color>
 </resources>
