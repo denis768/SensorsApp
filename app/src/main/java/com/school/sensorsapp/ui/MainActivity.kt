@@ -1,6 +1,5 @@
 package com.school.sensorsapp.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -39,10 +38,6 @@ class MainActivity : AppCompatActivity(), CameraListener {
     var latitude = 0
     var longitude = 0
     var altitude = 0
-    var green = 50
-    var orange = 150
-    var red = 250
-    var purple = 500
     private var mapObjectCollection: MapObjectCollection? = null
     private var placemarkMapObject: PlacemarkMapObject? = null
     var circle = Circle(
@@ -59,28 +54,13 @@ class MainActivity : AppCompatActivity(), CameraListener {
         val mapObjects = mapView!!.map.mapObjects
         mapObjects.addCircle(circle).apply {
             strokeWidth = 2f
-            if (airQuality > 0 && airQuality < green) {
-                strokeColor = ContextCompat.getColor(this@MainActivity, R.color.grey)
-                fillColor = ContextCompat.getColor(this@MainActivity, R.color.green)
-            }
-            if (airQuality > green && airQuality < orange) {
-                strokeColor = ContextCompat.getColor(this@MainActivity, R.color.grey)
-                fillColor = ContextCompat.getColor(this@MainActivity, R.color.orange)
-            }
-            if (airQuality > orange && airQuality < red) {
-                strokeColor = ContextCompat.getColor(this@MainActivity, R.color.grey)
-                fillColor = ContextCompat.getColor(this@MainActivity, R.color.red)
-            }
-            if (airQuality > red && airQuality < purple) {
-                strokeColor = ContextCompat.getColor(this@MainActivity, R.color.grey)
-                fillColor = ContextCompat.getColor(this@MainActivity, R.color.purple)
-            }
+//            if (0 < airQuality < 50) {
+            strokeColor = ContextCompat.getColor(this@MainActivity, R.color.grey)
+            fillColor = ContextCompat.getColor(this@MainActivity, R.color.green)
+//            }
         }
-        binding!!.imageBtn.setOnClickListener {
-            val intent = Intent(this@MainActivity, Profile::class.java)
-            startActivity(intent)
-        }
-
+//        binding.imageBtn.setOnClickListener(val intent  = Intent(this@MainActivity,Profile::class.java)
+//        startActivity(intent))
         moveToStartLocation()
         setMarkerInStartLocation()
     }
